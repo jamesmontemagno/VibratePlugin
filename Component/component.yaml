@@ -1,0 +1,26 @@
+%YAML 1.2
+---
+summary: Easily access the vibrate feature of any device.
+getting-started: GettingStarted.md
+details: Details.md
+license: License.md
+icons: 
+  - VibratePlugin_128x128.png
+  - VibratePlugin_512x512.png
+publisher: James Montemagno
+name: Vibrate Plugin
+samples: 
+  iOS Sample: ../Samples/VibrateSample.sln
+  Android Sample: ../Samples/VibrateSample.sln
+  WindowsPhone Sample: ../Samples/VibrateSample.sln
+id: VibratePlugin
+publisher-url: http://www.github.com/PluginsForXamarin/vibrate
+is_shell: true
+packages:
+  ios: Xam.Plugins.Vibrate, Version=2.0.0
+  ios-unified: Xam.Plugins.Vibrate, Version=2.0.0
+  android: Xam.Plugins.Vibrate, Version=2.0.0
+  winphone-8.0: Xam.Plugins.Vibrate, Version=2.0.0
+  winphone-8.1: Xam.Plugins.Vibrate, Version=2.0.0
+version: 2.0.0
+...
