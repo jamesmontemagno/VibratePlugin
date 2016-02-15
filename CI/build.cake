@@ -9,7 +9,7 @@ var libraries = new Dictionary<string, string> {
 };
 
 var samples = new Dictionary<string, string> {
-	{ "./../Sample/VibrateSample.sln", "Win" },
+	{ "./../Samples/VibrateSample.sln", "Win" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
