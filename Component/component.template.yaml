@@ -1,16 +1,28 @@
 %YAML 1.2
 ---
-summary: Easily access the vibrate feature of any device.
-getting-started: GettingStarted.md
-details: Details.md
+version: {VERSION}
+name: Vibrate Plugin
+id: VibratePlugin
+publisher: James Montemagno
 license: License.md
+skip_docs: true
 icons: 
   - VibratePlugin_128x128.png
   - VibratePlugin_512x512.png
-publisher: James Montemagno
-name: Vibrate Plugin
+publisher-url: http://www.github.com/PluginsForXamarin/vibrate
+is_shell: true
+packages:
+  ios: Xam.Plugins.Vibrate, Version={VERSION}
+  ios-unified: Xam.Plugins.Vibrate, Version={VERSION}
+  android: Xam.Plugins.Vibrate, Version={VERSION}
+  winphone-8.0: Xam.Plugins.Vibrate, Version={VERSION}
+  winphone-8.1: Xam.Plugins.Vibrate, Version={VERSION}
+  winuniversal-10.0: Xam.Plugins.Vibrate, Version={VERSION}
+summary: Easily access the vibrate feature of any device.
+details: Details.md
+getting-started: GettingStarted.md
 samples: 
-  - name: Vibrate Samples (iOS, Android, Windows)
+  - name: Vibrate Samples (iOS, Android, and Windows)
     path: "../Samples/VibrateSample.sln"
     removeProjects: 
       - Plugin.Vibrate
@@ -33,14 +45,6 @@ samples:
           - Xam.Plugins.Vibrate
     no_build: true
     skip_docs: true  
-id: VibratePlugin
-publisher-url: http://www.github.com/PluginsForXamarin/vibrate
-is_shell: true
-packages:
-  ios: Xam.Plugins.Vibrate, Version={VERSION}
-  ios-unified: Xam.Plugins.Vibrate, Version={VERSION}
-  android: Xam.Plugins.Vibrate, Version={VERSION}
-  winphone-8.0: Xam.Plugins.Vibrate, Version={VERSION}
-  winphone-8.1: Xam.Plugins.Vibrate, Version={VERSION}
-version: {VERSION}
+local-nuget-repo: ../Build/nuget
+no_build: true
 ...
