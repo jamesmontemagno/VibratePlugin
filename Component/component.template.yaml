@@ -17,10 +17,10 @@ id: VibratePlugin
 publisher-url: http://www.github.com/PluginsForXamarin/vibrate
 is_shell: true
 packages:
-  ios: Xam.Plugins.Vibrate, Version=2.0.0
-  ios-unified: Xam.Plugins.Vibrate, Version=2.0.0
-  android: Xam.Plugins.Vibrate, Version=2.0.0
-  winphone-8.0: Xam.Plugins.Vibrate, Version=2.0.0
-  winphone-8.1: Xam.Plugins.Vibrate, Version=2.0.0
-version: 2.0.0
+  ios: Xam.Plugins.Vibrate, Version={VERSION}
+  ios-unified: Xam.Plugins.Vibrate, Version={VERSION}
+  android: Xam.Plugins.Vibrate, Version={VERSION}
+  winphone-8.0: Xam.Plugins.Vibrate, Version={VERSION}
+  winphone-8.1: Xam.Plugins.Vibrate, Version={VERSION}
+version: {VERSION}
 ...
