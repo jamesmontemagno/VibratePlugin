@@ -77,8 +77,8 @@ Task ("NuGet")
 	NuGetPack ("./../Vibrate.nuspec", new NuGetPackSettings { 
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
-		OutputDirectory = "./../",
-		BasePath = "./../",
+		OutputDirectory = "./../Build/nuget/",
+		BasePath = "./../Build/nuget",
 	});	
 });
 
