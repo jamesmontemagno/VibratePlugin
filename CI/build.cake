@@ -102,7 +102,8 @@ Task("Component")
 	PackageComponent ("./../Component/", xamCompSettings);
 });
 
-Task ("Default").IsDependentOn("Component")
+//Build the component, which build samples, nugets, and libraries
+Task ("Default").IsDependentOn("Component");
 
 
 Task ("Clean").Does (() => 
