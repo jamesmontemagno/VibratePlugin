@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B95407F8-E8D7-453C-A6F2-E5E48CCD2966}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -162,16 +160,18 @@
     <ProjectReference Include="..\VibrateSample\VibrateSample.csproj">
       <Name>VibrateSample</Name>
     </ProjectReference>
+     <ProjectReference Include="..\..\..\Vibrate\Plugin.Vibrate.Abstractions\Plugin.Vibrate.Abstractions.csproj">
+      <Project>{E0A73AEB-607F-443E-9529-4173FE690A16}</Project>
+      <Name>Plugin.Vibrate.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Vibrate\Plugin.Vibrate.WinPhone\Plugin.Vibrate.WinPhone.csproj">
+      <Project>{9606B619-FC46-4512-A5AC-97B4B4A0FB60}</Project>
+      <Name>Plugin.Vibrate.WinPhone</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Refractored.Xam.Vibrate">
-      <HintPath>..\..\packages\Xam.Plugins.Vibrate.2.0.0\lib\wp8\Refractored.Xam.Vibrate.dll</HintPath>
-    </Reference>
-    <Reference Include="Refractored.Xam.Vibrate.Abstractions">
-      <HintPath>..\..\packages\Xam.Plugins.Vibrate.2.0.0\lib\wp8\Refractored.Xam.Vibrate.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\..\packages\Xamarin.Forms.2.0.1.6505\lib\WP80\Xamarin.Forms.Core.dll</HintPath>

@@ -1484,8 +1484,6 @@ namespace VibrateSample.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.ViewStubCompat_android_id = global::VibrateSample.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Xamarin.Forms.Platform.Resource.Styleable.ViewStubCompat_android_inflatedId = global::VibrateSample.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Xamarin.Forms.Platform.Resource.Styleable.ViewStubCompat_android_layout = global::VibrateSample.Droid.Resource.Styleable.ViewStubCompat_android_layout;
-			global::Plugin.Vibrate.Resource.String.ApplicationName = global::VibrateSample.Droid.Resource.String.ApplicationName;
-			global::Plugin.Vibrate.Resource.String.Hello = global::VibrateSample.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Animation

@@ -10,9 +10,29 @@ icons:
 publisher: James Montemagno
 name: Vibrate Plugin
 samples: 
-  iOS Sample: ../Samples/VibrateSample.sln
-  Android Sample: ../Samples/VibrateSample.sln
-  WindowsPhone Sample: ../Samples/VibrateSample.sln
+  - name: Vibrate Samples (iOS, Android, Windows)
+    path: "../Samples/VibrateSample.sln"
+    removeProjects: 
+      - Plugin.Vibrate
+      - Plugin.Vibrate.Abstractions
+      - Plugin.Vibrate.Android
+      - Plugin.Vibrate.iOSUnified
+      - Plugin.Vibrate.WinPhone
+    installNuGets:
+      - project: VibrateSample
+        packages: 
+          - Xam.Plugins.Vibrate
+      - project: VibrateSample.iOS
+        packages: 
+          - Xam.Plugins.Vibrate
+      - project: VibrateSample.Droid
+        packages: 
+          - Xam.Plugins.Vibrate
+      - project: VibrateSample.WinPhone
+        packages: 
+          - Xam.Plugins.Vibrate
+    no_build: true
+    skip_docs: true  
 id: VibratePlugin
 publisher-url: http://www.github.com/PluginsForXamarin/vibrate
 is_shell: true
