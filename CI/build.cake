@@ -78,7 +78,7 @@ Task ("NuGet")
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./../Build/nuget/",
-		BasePath = "./../Build/nuget",
+		BasePath = "./../",
 	});	
 });
 
