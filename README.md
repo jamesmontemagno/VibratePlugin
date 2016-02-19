@@ -1,15 +1,12 @@
 ## Vibrate
+Simple and elegant way to trigger the vibration on a device in your Xamarin, Windows, and Xamarin.Forms projects.
 
-Simple but elegant way of performing Vibrate in your Xamarin, Windows, and Xamarin.Forms projects
-
-### Xamarin, Windows, and Xamarin.Forms
-This NuGet can be used for all tradition Xamarin and Windows development with or without Xamarin.Forms. There is no requirement of a dependency service as it has a built in Singleton to access the vibrate functionality.
+## Status - In Production
+Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/4j8dh6sofntn7494?svg=true)](https://ci.appveyor.com/project/Plugins/vibrate)
 
 ## Setup
 * Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Vibrate [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Vibrate.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Vibrate/)
 * Install into your PCL project and Client projects.
-
-Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/4j8dh6sofntn7494?svg=true)](https://ci.appveyor.com/project/Plugins/vibrate)
 
 **Platform Support**
 
@@ -52,7 +49,6 @@ There is no API to vibrate for a specific amount of time, so it will vibrate for
 
 **Android**
 The `android.permission.VIBRATE` permission will automatically be added for you into your AndroidManifest.xml
-
 
 
 #### Contributors
