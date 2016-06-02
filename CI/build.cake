@@ -5,11 +5,11 @@ var TARGET = Argument ("target", Argument ("t", "Default"));
 var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
 
 var libraries = new Dictionary<string, string> {
- 	{ "./../Vibrate.sln", "Any" },
+ 	{ "./../VibratePlugin.sln", "Any" },
 };
 
 var samples = new Dictionary<string, string> {
-	{ "./../Samples/VibrateSample.sln", "Win" },
+	{ "./../samples/VibrateSample.sln", "Win" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
@@ -74,7 +74,7 @@ Task ("NuGet")
     if(!DirectoryExists("./../Build/nuget/"))
         CreateDirectory("./../Build/nuget");
         
-	NuGetPack ("./../Vibrate.nuspec", new NuGetPackSettings { 
+	NuGetPack ("./Plugin.nuspec", new NuGetPackSettings { 
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./../Build/nuget/",
@@ -91,7 +91,7 @@ Task("Component")
 	DeleteFiles ("./../Build/**/*.xml");
 
 	// Generate component.yaml files from templates
-	CopyFile ("./../Component/component.template.yaml", "./../Component/component.yaml");
+	CopyFile ("./../component/component.template.yaml", "./../component/component.yaml");
 
 	// Replace version in template files
 	ReplaceTextInFiles ("./../**/component.yaml", "{VERSION}", version);
@@ -99,7 +99,7 @@ Task("Component")
 	var xamCompSettings = new XamarinComponentSettings { ToolPath = "./tools/xamarin-component.exe" };
 
 	// Package both components
-	PackageComponent ("./../Component/", xamCompSettings);
+	PackageComponent ("./../component/", xamCompSettings);
 });
 
 //Build the component, which build samples, nugets, and libraries
