@@ -98,10 +98,10 @@
 
     
       <!--Net 4.5-->
-     <file src="Vibrate\Plugin.Vibrate.Abstractions\bin\Release\Plugin.Vibrate.Abstractions.dll" target="lib\net45\Plugin.Vibrate.Abstractions.dll" />
-     <file src="Vibrate\Plugin.Vibrate.Abstractions\bin\Release\Plugin.Vibrate.Abstractions.xml" target="lib\net45\Plugin.Vibrate.Abstractions.xml" />
-     <file src="Vibrate\Plugin.Vibrate.Net45\bin\Release\Plugin.Vibrate.dll" target="lib\net45\Plugin.Vibrate.dll" />
-     <file src="Vibrate\Plugin.Vibrate.Net45\bin\Release\Plugin.Vibrate.xml" target="lib\net45\Plugin.Vibrate.xml" />
+     <file src="..\src\Plugin.Vibrate.Abstractions\bin\Release\Plugin.Vibrate.Abstractions.dll" target="lib\net45\Plugin.Vibrate.Abstractions.dll" />
+     <file src="..\src\Plugin.Vibrate.Abstractions\bin\Release\Plugin.Vibrate.Abstractions.xml" target="lib\net45\Plugin.Vibrate.Abstractions.xml" />
+     <file src="..\src\Plugin.Vibrate.Net45\bin\Release\Plugin.Vibrate.dll" target="lib\net45\Plugin.Vibrate.dll" />
+     <file src="..\src\Plugin.Vibrate.Net45\bin\Release\Plugin.Vibrate.xml" target="lib\net45\Plugin.Vibrate.xml" />
     
 
    </files>

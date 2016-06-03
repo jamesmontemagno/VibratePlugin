@@ -9,7 +9,7 @@ skip_docs: true
 icons: 
   - VibratePlugin_128x128.png
   - VibratePlugin_512x512.png
-publisher-url: http://www.github.com/PluginsForXamarin/vibrate
+publisher-url: http://www.github.com/jamesmontemagno/VibratePlugin
 is_shell: true
 packages:
   ios: Xam.Plugins.Vibrate, Version={VERSION}
