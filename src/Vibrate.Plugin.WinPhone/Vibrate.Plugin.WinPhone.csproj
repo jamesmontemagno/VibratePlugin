@@ -87,7 +87,7 @@
     <Compile Include="Vibrate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Plugin.Vibrate.Abstractions\Plugin.Vibrate.Abstractions.csproj">
+    <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
       <Project>{e0a73aeb-607f-443e-9529-4173fe690a16}</Project>
       <Name>Plugin.Vibrate.Abstractions</Name>
     </ProjectReference>

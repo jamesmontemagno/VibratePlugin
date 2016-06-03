@@ -49,7 +49,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Plugin.Vibrate.Abstractions\Plugin.Vibrate.Abstractions.csproj">
+    <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
       <Project>{E0A73AEB-607F-443E-9529-4173FE690A16}</Project>
       <Name>Plugin.Vibrate.Abstractions</Name>
     </ProjectReference>
