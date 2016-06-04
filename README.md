@@ -25,14 +25,14 @@ Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68w
 
 To gain access to the Vibrate class simply use this method:
 
-```
+```csharp
 var v = CrossVibrate.Current;
 v.Vibration(1000); // 1 second vibration
 ```
 
 #### Methods
 
-```
+```csharp
 /// <summary>
 /// Vibrate the phone for specified amount of time
 /// </summary>
