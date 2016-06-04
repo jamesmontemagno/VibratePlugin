@@ -83,13 +83,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\Vibrate.Plugin\CrossVibrate.cs">
+      <Link>CrossVibrate.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vibrate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
       <Project>{e0a73aeb-607f-443e-9529-4173fe690a16}</Project>
-      <Name>Plugin.Vibrate.Abstractions</Name>
+      <Name>Vibrate.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

@@ -33,10 +33,10 @@
     <DocumentationFile>bin\iPhone\Release\Plugin.Vibrate.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\Plugin.Vibrate.iOS\Vibrate.cs">
+    <Compile Include="..\Vibrate.Plugin.iOS\Vibrate.cs">
       <Link>Vibrate.cs</Link>
     </Compile>
-    <Compile Include="..\Plugin.Vibrate\CrossVibrate.cs">
+    <Compile Include="..\Vibrate.Plugin\CrossVibrate.cs">
       <Link>CrossVibrate.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,7 +51,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
       <Project>{E0A73AEB-607F-443E-9529-4173FE690A16}</Project>
-      <Name>Plugin.Vibrate.Abstractions</Name>
+      <Name>Vibrate.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

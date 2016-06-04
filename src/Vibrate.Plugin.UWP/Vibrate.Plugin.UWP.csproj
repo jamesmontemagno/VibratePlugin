@@ -109,7 +109,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Plugin.Vibrate\CrossVibrate.cs">
+    <Compile Include="..\Vibrate.Plugin\CrossVibrate.cs">
       <Link>CrossVibrate.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,7 +119,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
       <Project>{e0a73aeb-607f-443e-9529-4173fe690a16}</Project>
-      <Name>Refractored.Xam.Vibrate.Abstractions</Name>
+      <Name>Vibrate.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

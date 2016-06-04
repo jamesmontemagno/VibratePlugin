@@ -81,10 +81,16 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
       <Project>{e0a73aeb-607f-443e-9529-4173fe690a16}</Project>
-      <Name>Plugin.Vibrate.Abstractions</Name>
+      <Name>Vibrate.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Vibrate.Plugin.WinPhone\Vibrate.cs">
+      <Link>Vibrate.cs</Link>
+    </Compile>
+    <Compile Include="..\Vibrate.Plugin\CrossVibrate.cs">
+      <Link>CrossVibrate.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
