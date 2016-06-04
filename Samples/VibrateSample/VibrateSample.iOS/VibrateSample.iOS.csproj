@@ -101,14 +101,6 @@
       <Name>VibrateSample</Name>
       <Project>{D5E9F797-CA33-43BE-9342-8AB8CED6515B}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Vibrate\Plugin.Vibrate.Abstractions\Plugin.Vibrate.Abstractions.csproj">
-      <Project>{E0A73AEB-607F-443E-9529-4173FE690A16}</Project>
-      <Name>Plugin.Vibrate.Abstractions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Vibrate\Plugin.Vibrate.iOSUnified\Plugin.Vibrate.iOSUnified.csproj">
-      <Project>{A6B81057-0668-4931-A605-84F7AC1CA937}</Project>
-      <Name>Plugin.Vibrate.iOSUnified</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -129,6 +121,14 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Plugin.Vibrate, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.2.0.0\lib\Xamarin.iOS10\Plugin.Vibrate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Vibrate.Abstractions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.2.0.0\lib\Xamarin.iOS10\Plugin.Vibrate.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />

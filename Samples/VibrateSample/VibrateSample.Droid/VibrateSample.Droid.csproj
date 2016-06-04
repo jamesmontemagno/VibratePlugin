@@ -46,6 +46,14 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Plugin.Vibrate, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.2.0.0\lib\MonoAndroid10\Plugin.Vibrate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Vibrate.Abstractions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.2.0.0\lib\MonoAndroid10\Plugin.Vibrate.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -104,14 +112,6 @@
     <ProjectReference Include="..\VibrateSample\VibrateSample.csproj">
       <Name>VibrateSample</Name>
       <Project>{D5E9F797-CA33-43BE-9342-8AB8CED6515B}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Vibrate\Plugin.Vibrate.Abstractions\Plugin.Vibrate.Abstractions.csproj">
-      <Project>{E0A73AEB-607F-443E-9529-4173FE690A16}</Project>
-      <Name>Plugin.Vibrate.Abstractions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Vibrate\Plugin.Vibrate.Android\Plugin.Vibrate.Android.csproj">
-      <Project>{3C98C724-1797-4991-9AF2-969A337465DE}</Project>
-      <Name>Plugin.Vibrate.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
