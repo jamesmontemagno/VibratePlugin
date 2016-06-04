@@ -1,12 +1,11 @@
-## Vibrate
-Simple and elegant way to trigger the vibration on a device in your Xamarin, Windows, and Xamarin.Forms projects.
+## Vibrate Plugin for Xamarin and Windows
+Simple and elegant way to trigger the vibration on a device in your Xamarin.iOS, Xamarin.Android, Windows, and Xamarin.Forms projects.
 
-## Status - In Production
-Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/4j8dh6sofntn7494?svg=true)](https://ci.appveyor.com/project/Plugins/vibrate)
-
-## Setup
+### Setup
 * Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Vibrate [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Vibrate.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Vibrate/)
 * Install into your PCL project and Client projects.
+
+Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68wxtxmudjiml1?svg=true)](https://ci.appveyor.com/project/JamesMontemagno/vibrateplugin)
 
 **Platform Support**
 
@@ -51,11 +50,10 @@ There is no API to vibrate for a specific amount of time, so it will vibrate for
 The `android.permission.VIBRATE` permission will automatically be added for you into your AndroidManifest.xml
 
 
-#### Contributors
-* [jamesmontemagno](https://github.com/jamesmontemagno)
+#### Contributions
+Contributions are welcome! If you find a bug please report it and if you want a feature please report it.
 
-Thanks!
+If you want to contribute code please file an issue and create a branch off of the current dev branch and file a pull request.
 
 #### License
-The MIT License (MIT)
-Copyright (c) 2016 James Montemagno / Refractored LLC
+Under MIT, see LICENSE file.
