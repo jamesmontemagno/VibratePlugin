@@ -1,13 +1,7 @@
 using System;
-
 using Plugin.Vibrate.Abstractions;
-
-#if __UNIFIED__
 using AudioToolbox;
 
-#else
-using MonoTouch.AudioToolbox;
-#endif
 
 namespace Plugin.Vibrate
 {
@@ -17,12 +11,11 @@ namespace Plugin.Vibrate
     public class Vibrate : IVibrate
     {
         /// <summary>
-        /// Vibrate device with default length
+        /// Vibrate the phone for specified amount of time
         /// </summary>
-        /// <param name="milliseconds">Ignored (iOS doesn't expose)</param>
-        public void Vibration(int milliseconds = 500)
-        {
+        /// <param name="vibrateSpan">Time span to vibrate. 500ms is default if null</param>
+        public void Vibration(TimeSpan? vibrateSpan = null) =>
             SystemSound.Vibrate.PlaySystemSound();
-        }
+        
     }
 }

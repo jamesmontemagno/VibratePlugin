@@ -1,15 +1,10 @@
-#addin nuget:https://nuget.org/api/v2/?package=Cake.FileHelpers&version=1.0.3.2
-#addin nuget:https://nuget.org/api/v2/?package=Cake.Xamarin&version=1.2.3
+#addin "Cake.FileHelpers"
 
 var TARGET = Argument ("target", Argument ("t", "Default"));
 var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
 
 var libraries = new Dictionary<string, string> {
  	{ "./src/Vibrate.sln", "Any" },
-};
-
-var samples = new Dictionary<string, string> {
-	{ "./samples/VibrateSample.sln", "Win" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
@@ -60,15 +55,9 @@ Task("Libraries").Does(()=>
     BuildAction(libraries);
 });
 
-Task("Samples")
-    .IsDependentOn("Libraries")
-    .Does(()=>
-{
-    BuildAction(samples);
-});
 
 Task ("NuGet")
-	.IsDependentOn ("Samples")
+	.IsDependentOn ("Libraries")
 	.Does (() =>
 {
     if(!DirectoryExists("./Build/nuget/"))
@@ -83,28 +72,9 @@ Task ("NuGet")
 	});	
 });
 
-Task("Component")
-    .IsDependentOn("Samples")
-    .IsDependentOn("NuGet")
-    .Does(()=>
-{
-    // Clear out xml files from build (they interfere with the component packaging)
-	DeleteFiles ("./Build/**/*.xml");
-
-	// Generate component.yaml files from templates
-	CopyFile ("./component/component.template.yaml", "./component/component.yaml");
-
-	// Replace version in template files
-	ReplaceTextInFiles ("./**/component.yaml", "{VERSION}", version);
-
-	var xamCompSettings = new XamarinComponentSettings { ToolPath = "./tools/xamarin-component.exe" };
-
-	// Package both components
-	PackageComponent ("./component/", xamCompSettings);
-});
 
 //Build the component, which build samples, nugets, and libraries
-Task ("Default").IsDependentOn("Component");
+Task ("Default").IsDependentOn("NuGet");
 
 
 Task ("Clean").Does (() => 

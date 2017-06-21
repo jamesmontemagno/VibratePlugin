@@ -8,16 +8,21 @@ namespace Plugin.Vibrate
     /// </summary>
     public static class CrossVibrate
     {
-        static Lazy<IVibrate> TTS = new Lazy<IVibrate>(() => CreateVibrate(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static Lazy<IVibrate> implementation = new Lazy<IVibrate>(() => CreateVibrate(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
-        /// <summary>
-        /// Current settings to use
-        /// </summary>
-        public static IVibrate Current
+		/// <summary>
+		/// Gets if the plugin is supported on the current platform.
+		/// </summary>
+		public static bool IsSupported => implementation.Value == null ? false : true;
+
+		/// <summary>
+		/// Current plugin implementation to use
+		/// </summary>
+		public static IVibrate Current
         {
             get
             {
-                var ret = TTS.Value;
+                var ret = implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
@@ -28,16 +33,15 @@ namespace Plugin.Vibrate
 
         static IVibrate CreateVibrate()
         {
-#if PORTABLE
+#if NETSTANDARD1_0
             return null;
 #else
             return new Vibrate();
 #endif
         }
 
-        internal static Exception NotImplementedInReferenceAssembly()
-        {
-            return new NotImplementedException("This functionality is not implemented in the portable version of this assembly.  You should reference the Xam.Plugins.Vibrate NuGet package from your main application project in order to reference the platform-specific implementation.");
-        }
+        internal static Exception NotImplementedInReferenceAssembly() =>
+			new NotImplementedException("This functionality is not implemented in the portable version of this assembly.  You should reference the NuGet package from your main application project in order to reference the platform-specific implementation.");
+        
     }
 }

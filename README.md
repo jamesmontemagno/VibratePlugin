@@ -10,15 +10,10 @@ Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68w
 **Platform Support**
 
 |Platform|Supported|Version|
-| ------------------- | :-----------: | :------------------: |
-|Xamarin.iOS|Yes|iOS 7+|
-|Xamarin.iOS Unified|Yes|iOS 7+|
-|Xamarin.Android|Yes|API 10+|
-|Windows Phone Silverlight|Yes|8.0+|
-|Windows Phone RT|Yes|8.1+|
-|Windows Store RT|---|8.1+|
-|Windows 10 UWP|Yes|10+|
-|Xamarin.Mac|No||
+| ------------------- | :------------------: |
+|Xamarin.iOS|iOS 7+|
+|Xamarin.Android|API 10+|
+|Windows 10 UWP|10+|
 
 
 ### API Usage

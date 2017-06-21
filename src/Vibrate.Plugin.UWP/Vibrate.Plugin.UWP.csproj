@@ -117,18 +117,18 @@
     <Content Include="Properties\Plugin.Vibrate.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
-      <Project>{e0a73aeb-607f-443e-9529-4173fe690a16}</Project>
-      <Name>Vibrate.Plugin.Abstractions</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <SDKReference Include="WindowsDesktop, Version=10.0.10240.0">
       <Name>Windows Desktop Extensions for the UWP</Name>
     </SDKReference>
     <SDKReference Include="WindowsMobile, Version=10.0.10240.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vibrate.Plugin.Abstractions\Vibrate.Plugin.Abstractions.csproj">
+      <Project>{5eaec984-0fb8-4859-8757-9e617d82ff27}</Project>
+      <Name>Vibrate.Plugin.Abstractions</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

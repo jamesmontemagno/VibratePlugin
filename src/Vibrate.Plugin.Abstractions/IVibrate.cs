@@ -1,4 +1,6 @@
-﻿namespace Plugin.Vibrate.Abstractions
+﻿using System;
+
+namespace Plugin.Vibrate.Abstractions
 {
     /// <summary>
     /// Vibration interface
@@ -8,7 +10,7 @@
         /// <summary>
         /// Vibrate the phone for specified amount of time
         /// </summary>
-        /// <param name="milliseconds">Time in Milliseconds to vibrate. 500ms is default</param>
-        void Vibration(int milliseconds = 500);
+        /// <param name="vibrateSpan">Time span to vibrate. 500ms is default if null</param>
+        void Vibration(TimeSpan? vibrateSpan = null);
     }
 }
