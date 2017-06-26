@@ -114,7 +114,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vibrate.cs" />
-    <Content Include="Properties\Plugin.Vibrate.rd.xml" />
+    <EmbeddedResource Include="Properties\Plugin.Vibrate.rd.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="WindowsDesktop, Version=10.0.10240.0">
