@@ -11,13 +11,31 @@ namespace Plugin.Vibrate
     /// </summary>
     public class Vibrate : IVibrate
     {
-        /// <summary>
-        /// Vibrate the phone for specified amount of time
-        /// </summary>
-        /// <param name="vibrateSpan">Time span to vibrate. 500ms is default if null</param>
-        public void Vibration(TimeSpan? vibrateSpan = null)
+		/// <summary>
+		/// Gets if device can vibrate
+		/// </summary>
+		public bool CanVibrate
+		{
+			get
+			{
+				if ((int)Build.VERSION.SdkInt >= 11)
+				{
+
+					using (var v = (Vibrator)Android.App.Application.Context.GetSystemService(Context.VibratorService))
+						return v.HasVibrator;
+				}
+
+				return true;
+			}
+		}
+
+		/// <summary>
+		/// Vibrate the phone for specified amount of time
+		/// </summary>
+		/// <param name="vibrateSpan">Time span to vibrate. 500ms is default if null</param>
+		public void Vibration(TimeSpan? vibrateSpan = null)
         {
-            var milliseconds = vibrateSpan.HasValue ? vibrateSpan.Value.Milliseconds : 500;
+            var milliseconds = vibrateSpan.HasValue ? vibrateSpan.Value.TotalMilliseconds : 500;
             using (var v = (Vibrator)Android.App.Application.Context.GetSystemService(Context.VibratorService))
             {
                 if ((int)Build.VERSION.SdkInt >= 11)
@@ -31,12 +49,12 @@ namespace Plugin.Vibrate
 #endif
                 }
 
-                if (milliseconds < 0)
-                    milliseconds = 0;
+				if (milliseconds < 0)
+					milliseconds = 0;
 
                 try
                 {
-                    v.Vibrate(milliseconds);
+                    v.Vibrate((int)milliseconds);
                 }
                 catch (Exception ex)
                 {

@@ -10,11 +10,17 @@ namespace Plugin.Vibrate
     /// </summary>
     public class Vibrate : IVibrate
     {
-        /// <summary>
-        /// Vibrate the phone for specified amount of time
-        /// </summary>
-        /// <param name="vibrateSpan">Time span to vibrate. 500ms is default if null</param>
-        public void Vibration(TimeSpan? vibrateSpan = null) =>
+
+		/// <summary>
+		/// Gets if device can vibrate
+		/// </summary>
+		public bool CanVibrate => true;
+
+		/// <summary>
+		/// Vibrate the phone for specified amount of time
+		/// </summary>
+		/// <param name="vibrateSpan">Time span to vibrate. 500ms is default if null</param>
+		public void Vibration(TimeSpan? vibrateSpan = null) =>
             SystemSound.Vibrate.PlaySystemSound();
         
     }
