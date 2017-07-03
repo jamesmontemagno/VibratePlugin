@@ -9,7 +9,7 @@ Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68w
 
 **Platform Support**
 
-|Platform|Supported|Version|
+|Platform|Version|
 | ------------------- | :------------------: |
 |Xamarin.iOS|iOS 7+|
 |Xamarin.Android|API 10+|
