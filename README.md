@@ -22,7 +22,7 @@ To gain access to the Vibrate class simply use this method:
 
 ```csharp
 var v = CrossVibrate.Current;
-v.Vibration(1000); // 1 second vibration
+v.Vibration(TimeSpan.FromSeconds(1)); // 1 second vibration
 ```
 
 #### Methods
@@ -31,8 +31,8 @@ v.Vibration(1000); // 1 second vibration
 /// <summary>
 /// Vibrate the phone for specified amount of time
 /// </summary>
-/// <param name="milliseconds">Time in Milliseconds to vibrate. 500ms is default</param>
-void Vibration(int milliseconds = 500);
+/// <param name="milliseconds">Time to vibrate. 500ms is default</param>
+void Vibration(TimeSpan? vibrateSpan = null);
 ```
 
 
