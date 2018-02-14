@@ -5,7 +5,7 @@ Simple and elegant way to trigger the vibration on a device in your Xamarin.iOS,
 * Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Vibrate [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Vibrate.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Vibrate/)
 * Install into your PCL project and Client projects.
 
-Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68wxtxmudjiml1?svg=true)](https://ci.appveyor.com/project/JamesMontemagno/vibrateplugin)
+Build status: [![Build status](https://jamesmontemagno.visualstudio.com/_apis/public/build/definitions/6b79a378-ddd6-4e31-98ac-a12fcd68644c/12/badge)
 
 **Platform Support**
 
@@ -31,7 +31,7 @@ v.Vibration(TimeSpan.FromSeconds(1)); // 1 second vibration
 /// <summary>
 /// Vibrate the phone for specified amount of time
 /// </summary>
-/// <param name="milliseconds">Time to vibrate. 500ms is default</param>
+/// <param name="vibrateSpan">Time to vibrate. 500ms is default</param>
 void Vibration(TimeSpan? vibrateSpan = null);
 ```
 
@@ -39,7 +39,7 @@ void Vibration(TimeSpan? vibrateSpan = null);
 #### Platform Tweaks
 
 **iOS**
-There is no API to vibrate for a specific amount of time, so it will vibrate for the default time the system specifies (around 500 milliseconds..
+There is no API to vibrate for a specific amount of time, so it will vibrate for the default time the system specifies (around 500 milliseconds)..
 
 **Android**
 The `android.permission.VIBRATE` permission will automatically be added for you into your AndroidManifest.xml

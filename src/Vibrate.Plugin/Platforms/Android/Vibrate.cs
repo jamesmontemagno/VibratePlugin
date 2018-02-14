@@ -3,7 +3,9 @@ using System;
 using Plugin.Vibrate.Abstractions;
 using Android.OS;
 using Android.Content;
+using Android.App;
 
+[assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
 namespace Plugin.Vibrate
 {
     /// <summary>
