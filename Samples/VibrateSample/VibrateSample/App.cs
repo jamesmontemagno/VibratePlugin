@@ -20,7 +20,7 @@ namespace VibrateSample
             var sliderVibrate = new Slider(0, 10000.0, 500.0);
 
             vibrateButton.Clicked += (sender, args) =>
-        CrossVibrate.Current.Vibration((int)sliderVibrate.Value);
+        CrossVibrate.Current.Vibration(TimeSpan.FromMilliseconds((int)sliderVibrate.Value));
 
             // The root page of your application
             MainPage = new NavigationPage(new ContentPage
