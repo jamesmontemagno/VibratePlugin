@@ -50,7 +50,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0.15063' ">
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="5.2.3" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="5.2.4" />
     <SDKReference Include="WindowsDesktop, Version=10.0.15063.0">
       <Name>Windows Desktop Extensions for the UWP</Name>
     </SDKReference>
